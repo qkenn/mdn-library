@@ -8,5 +8,8 @@
   },
   "author": "qkenn",
   "license": "MIT",
-  "description": "Adaptation of MDN Local Library project"
+  "description": "Adaptation of MDN Local Library project",
+  "dependencies": {
+    "express": "^4.19.2"
+  }
 }
