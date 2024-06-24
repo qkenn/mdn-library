@@ -1,0 +1,12 @@
+{
+  "name": "mdn-express-library",
+  "version": "1.0.0",
+  "main": "app.js.js",
+  "scripts": {
+    "start": "node app.js",
+    "dev": "node --watch --env-file=.env app.js"
+  },
+  "author": "qkenn",
+  "license": "MIT",
+  "description": "Adaptation of MDN Local Library project"
+}
