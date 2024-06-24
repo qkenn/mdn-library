@@ -10,6 +10,7 @@
   "license": "MIT",
   "description": "Adaptation of MDN Local Library project",
   "dependencies": {
-    "express": "^4.19.2"
+    "express": "^4.19.2",
+    "pug": "^3.0.3"
   }
 }
