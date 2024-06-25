@@ -2,7 +2,13 @@ const express = require('express');
 const path = require('path');
 const logger = require('morgan');
 const cookieParser = require('cookie-parser');
-const index = require('./routes/main');
+
+// Importing routers
+const indexRouter = require('./routes/index');
+const bookRouter = require('./routes/bookRouter');
+const authorRouter = require('./routes/authorRouter');
+const bookInstanceRouter = require('./routes/bookInstanceRouter');
+const genreRouter = require('./routes/genreRouter');
 
 // environment variables
 const port = process.env.PORT;
@@ -35,7 +41,11 @@ app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'pug');
 
 // routes
-app.use('/', index);
+app.use('/', indexRouter);
+app.use('/catalog/books', bookRouter);
+app.use('/catalog/authors', authorRouter);
+app.use('/catalog/bookinstances', bookInstanceRouter);
+app.use('/catalog/genres', genreRouter);
 
 // server
 app.listen(port);
