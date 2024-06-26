@@ -14,13 +14,13 @@ router.get('/', async (req, res, next) => {
       bookInstanceCount,
       bookInstanceAvailableCount,
       genreCount,
-    ] = await Promise.all(
-      [Book.countDocuments({}).exec()],
-      [Author.countDocuments({}).exec()],
-      [BookInstance.countDocuments({}).exec()],
-      [BookInstance.countDocuments({ status: 'Available' }).exec()],
-      [Genre.countDocuments({}).exec()]
-    );
+    ] = await Promise.all([
+      Book.countDocuments({}).exec(),
+      Author.countDocuments({}).exec(),
+      BookInstance.countDocuments({}).exec(),
+      BookInstance.countDocuments({ status: 'Available' }).exec(),
+      Genre.countDocuments({}).exec(),
+    ]);
 
     res.render('index', {
       bookCount,
